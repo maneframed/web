@@ -1,0 +1,20 @@
+{
+  "name": "backend-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "3.0.1",
+    "express": "4.15.3",
+    "mongodb": "2.2.29",
+    "node-cache": "4.1.1",
+    "utf-8-validate": "3.0.2",
+    "ws": "3.0.0"
+  }
+}
