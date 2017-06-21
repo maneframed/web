@@ -4,6 +4,8 @@ const express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
 const assert = require('assert');
+const process = require('process');
+const MONGODB_URI=process.env.MONGODB_URI
 
 const PORT = process.env.PORT || 5000;
 const INDEX = path.join(__dirname, 'index.html');
@@ -16,7 +18,7 @@ const CLIENTS=new Map();
 
 const MongoClient = require('mongodb').MongoClient
 
-MongoClient.connect('mongodb://heroku_jr2m47gt:b1rdrm0fo0d4psfb5tfabt6a02@ds133582.mlab.com:33582/heroku_jr2m47gt', function (err, db) {
+MongoClient.connect(MONGODB_URI, function (err, db) {
   if (err) throw err
 
   db.collection('machines').find().toArray(function (err, result) {

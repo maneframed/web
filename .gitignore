@@ -1,2 +1,5 @@
 node_modules/
 .vscode/
+
+# Secrets must be kept secret:
+.env
